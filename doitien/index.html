@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function dongho(){
+            var today = new Date();
+           
+            var gio = today.getHours();
+            var phut = today.getMinutes();
+            var giay = today.getSeconds();
+            setTimeout("dongho()",1000);
+            var thongtin = gio+":"+phut+":"+giay;
+            document.getElementById('time').innerHTML=thongtin;
+        }
+        function ngay(){
+            var today = new Date();
+            var thu = today.getDay()+1;
+            var ngay = today.getDate();
+            var thang = today.getMonth()+1;
+            var nam = today.getFullYear();
+            var lich = "Thứ"+thu+", "+ngay+"/"+thang+"/"+nam;
+            document.getElementById('ngay').innerHTML=lich;
+        }
+        function convert(param1){
+    var factor;
+    f = document.getElementById('from').value
+    t = document.getElementById('to').value
+
+    if(f == t){
+        factor = 1
+    }
+    else if(f == 'EUR' && t == 'USD'){
+        factor = 0.0002840909090909091;
+    }
+    else if(f == 'USD' && t == 'EUR'){
+        factor = 1/0.0002840909090909091;
+    }
+
+    if(param1 == "C"){
+        document.getElementById('secondinput').value = document.getElementById('firstinput').value * factor
+    }
+    if(param1 == "F"){
+        document.getElementById('firstinput').value = document.getElementById('secondinput').value * factor
+    }
+
+}
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <img src="images/huy.jpg" width="100%" alt="">
+        </div>
+        <div class="time">
+            <p>Tỷ giá biến động liên tục. Hãy hỏi trước khi giao dịch!</p>
+            <div class="ngaythang">
+                <span id="time"></span>
+                <script>
+                    dongho();
+                </script>
+                <span id="ngay"></span>
+                <script>
+                    ngay();
+                </script>
+            </div>
+        </div>
+        <div class="chuyendoi">
+            <h3>Tỷ giá chuyển dổi</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="giamua">
+                            <p>Tỷ giá mua</p>
+                            <span>3575</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="giaban">
+                            <p>Tỷ giá bán</p>
+                            <span>3640</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-chuyendoi">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input id="firstinput" class="form-control" onkeyup="convert('C');">
+                            <select id="from" onchange="convert('C')">
+                                <option value="EUR" selected>Việt Nam Đồng(VNĐ)</option>
+                                <option value="USD">Nhân Dân Tệ(CNY)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="secondinput" class="form-control" onkeyup="convert('F')">
+          
+                            <select id="to"  onchange="convert('F')">
+                                <option value="EUR">Việt Nam Đồng(VNĐ)</option>
+                                <option value="USD" selected>Nhân Dân Tệ(CNY)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn-cd">
+                        <button id="switch_currency">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tt1">
+                            <h2>NGUYỄN MẠNH HUY</h2>
+                            <h2>UY TÍN TẠO NÊN THƯƠNG HIỆU</h2>
+                            <p><b>Địa chỉ :</b> Đông Lĩnh, TP Thanh Hoá, Tỉnh Thanh Hoá</p>
+                            <p><b>Hotline :</b>0123648556</p>
+                            <p><b>Email :</b>ahah@gmail.com</p>
+                        <div class="tt2">
+                            <h2>thông tin chuyển khoản</h2>
+                            
+                            <p><b>TECHCOMBANK :</b> Đông Lĩnh, TP Thanh Hoá, Tỉnh Thanh Hoá</p>
+                            <p><b>TECHCOMBANK :</b>0123648556</p>
+                            <p><b>TECHCOMBANK :</b>ahah@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="anh">
+                        <img src="images/wechat.jpg" style="margin-right: 20px;" alt="">
+                        <img src="images/zalo.jpg" alt="">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="fotter-bot">
+            <p>© 22021, Copyright nhumdichvu.com - Website cập nhật nhanh giá cả thị trường.</p>
+        </div>
+        <div class="hal">
+            <div class="halitem">
+            <div class="halbg" 
+                style="background: #dd3333"></div>
+            <div class="halcontent" 
+                style="background: #dd3333">Gọi cho Nhum</div>
+            <div class="halimg" 
+                style="background: #dd3333"><a href="tel:0966458989"><img src="https://anhlinhmkt.com/wp-content/uploads/2021/04/phone-1.png" alt="Gọi cho anhlinhmkt"></a></div>
+            </p></div>
+            <div class="halitem">
+            <div class="halbg" 
+                style="background: #2196F3"></div>
+            <div class="halcontent" 
+                style="background: #2196F3">Nhắn Messenger</div>
+            <div class="halimg" 
+                style="background: #2196F3"><a href="https://m.me/anhlinhbmt0966458989"><img src="https://anhlinhmkt.com/wp-content/uploads/2021/04/mess-1.png" alt="Nhắn tin Messenger"></a></div>
+            </p></div>
+            <div class="halitem">
+            <div class="halbg" 
+                style="background: #2196F3"></div>
+            <div class="halcontent" 
+                style="background: #2196F3">Chat Zalo</div>
+            <div class="halimg" 
+                style="background: #2196F3"><a href="https://zalo.me/0966458989"><img src="https://anhlinhmkt.com/wp-content/uploads/2021/04/zalo-1.png" alt="Chat Zalo"></a></div>
+            </p></div>
+          
+            </p></div>
+    
+</body>
+</html>
