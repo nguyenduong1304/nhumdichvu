@@ -12,25 +12,62 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <title>admin</title>
+    <style>
+        html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+    </style>
 </head>
-<body>
-    <h3 class="alert alert-warning text-center">Admin Đăng nhập: </h3>
-    <br>
-    <form style="margin-left: 25%;" class="col-md-6 justify-content-center" action="admin_sonhum.php" method="post">       
-        
-        <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Tài khoản:</label>
-            <div class="col-sm-10">
-                <input type="text" name="acc" class="form-control" id="staticEmail">
-            </div>
+<body class="text-center">
+<main class="form-signin">
+    <form action="admin_sonhum.php" method="post">       
+        <h1 class="h3 mb-3 fw-normal">Vui lòng đăng nhập</h1>
+        <div class="form-floating">
+        <input type="text" name="acc" class="form-control" id="floatingInput">
+        <label for="floatingInput">Tài khoản</label>
         </div>
-        <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Mật khẩu:</label>
-            <div class="col-sm-10">
-                <input type="password" name="pass" class="form-control" id="inputPassword">
-            </div>
+        <div class="form-floating">
+        <input type="password" name="pass" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Mật khẩu</label>
         </div>
-        <input name="login" class="form-control btn btn-success" type="submit" value="Đăng nhập">
+        </div>
+        <input name="login" class="w-100 btn btn-lg btn-primary" type="submit" value="Đăng nhập">
     </form>
     <?php
 
@@ -52,5 +89,6 @@
             };
         }
     ?>
+</main>
 </body>
 </html>

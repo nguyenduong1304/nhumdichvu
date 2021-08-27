@@ -28,14 +28,14 @@
     </ul>
     <form action="ti-gia.php" method="post">
         <div class="row m-5 p-5">
-            <div class="col">
+            <div>
                 <input type="number" name="ti_gia_mua" class="form-control" placeholder="Tỉ giá mua" aria-label="First name">
             </div>
-            <div class="col">
+            <div>
                 <input type="number" name="ti_gia_ban" class="form-control" placeholder="Tỉ giá bán" aria-label="Last name">
             </div>
 
-            <div class="col">
+            <div>
                 <input type="submit" class="form-control btn btn-success" value="Cập nhật giá" name="update">
             </div>
         </div>

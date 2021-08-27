@@ -94,12 +94,8 @@
               </div>
             </div>
 
-            <div class="ngaythang"><span id="time"></span><span class="ngay">
+            <div class="ngaythang"><span style="color: white;" id="time"></span><span style="color: white;" class="ngay">
                 Thứ 6, 27/08/2021 </span>
-
-
-
-
             </div>
           </div>
         </div>
