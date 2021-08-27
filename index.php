@@ -1,13 +1,17 @@
 <!DOCTYPE html
   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi-vn" lang="vi-vn">
-
+<?php
+    $read = @fopen('ti_gia.txt', "r");
+    $info = fgets($read);
+    $ti_gia = explode(",", $info);
+?>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Nhum Dịch Vụ</title>
-  <script src="/jquery.min.js" type="text/javascript"></script>
-  <script src="/plugins/system/jqueryeasy/jquerynoconflict.js" type="text/javascript" defer="defer"></script>
-  <script src="/media/system/js/mootools-core.js" type="text/javascript" defer="defer"></script>
+  <script src="jquery.min.js" type="text/javascript"></script>
+  <script src="plugins/system/jqueryeasy/jquerynoconflict.js" type="text/javascript" defer="defer"></script>
+  <script src="media/system/js/mootools-core.js" type="text/javascript" defer="defer"></script>
   <script type="text/javascript">
 
   </script>
@@ -15,11 +19,11 @@
 
   <link href="/plugins/system/jat3/jat3/base-themes/default/images/favico.ico" rel="shortcut icon"
     type="image/x-icon" />
-  <link rel="stylesheet" href="/templates/ja_social/css/template.css" type="text/css">
+  <link rel="stylesheet" href="templates/ja_social/css/template.css" type="text/css">
   <link rel="canonical" href="https://nhumdichvu.com/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <link rel="stylesheet" href="/templates/responsive/responsive.css" type="text/css">
-  <script defer="defer" type="text/javascript" src="/templates/responsive/responsive.js"></script>
+  <link rel="stylesheet" href="templates/responsive/responsive.css" type="text/css">
+  <script defer="defer" type="text/javascript" src="templates/responsive/responsive.js"></script>
 </head>
 
 <body id="bd" class="bd fs3 com_content  bodyhome_bd">
@@ -125,14 +129,14 @@
                             <div class="text-inner text-center">
                               <h3 class="title-mb uppercase"><strong>TỶ GIÁ MUA</strong></h3>
                               <h2 class="title-mobile" style="text-align: center;"><span><strong
-                                    class="giamua">3570</strong></span></h2>
+                                    class="giamua"><?= $ti_gia[0] ?></strong></span></h2>
                             </div>
                           </td>
                           <td>
                             <div class="text-inner text-center">
                               <h3 class="title-mb uppercase"><strong>TỶ GIÁ BÁN</strong></h3>
                               <h2 class="title-mobile" style="text-align: center;"><span><strong
-                                    class="giaban">3640</strong></span></h2>
+                                    class="giaban"><?= $ti_gia[1] ?></strong></span></h2>
                             </div>
                           </td>
                         </tr>
@@ -187,9 +191,9 @@
 
                     <div class="custom">
                       <h1>SON THI NHUM <br />UY TÍN TẠO NÊN THƯƠNG HIỆU</h1>
-                      <p><strong>Địa chỉ :</strong> Đông Lĩnh, TP Thanh Hoá, Tỉnh Thanh Hoá</p>
+                      <p><strong>Địa chỉ :</strong> Số 77 Soài Côn,Phường 2, Vĩnh Châu, Tỉnh Sóc Trăng</p>
                       <p><strong>Hotline :</strong> 0379 492 358</p>
-                      <p><strong>ID Wechat :</strong> Jeanhum_0126 </p>
+                      <p><strong>ID Wechat :</strong> Jaenhum_0126 </p>
                       <p>&nbsp;</p>
                       <h3>THÔNG TIN CHUYỂN KHOẢN</h3>
                       <p><strong>TECHCOMBANK :</strong> 1903112317018</p>
@@ -292,7 +296,7 @@
                 <li class="hotline_float_icon"><a id="messengerButton" href="//zalo.me/0379492358" rel="nofollow"><i
                       class="fa fa-zalo animated infinite tada"></i><span>Nhắn tin qua Zalo</span></a>&nbsp;</li>
                 <li class="hotline_float_icon"><a id="messengerButton"
-                    href="https://api.whatsapp.com/send?phone=+0588648888&amp;text=I am interested in your service"
+                    href="https://api.whatsapp.com/send?phone=15132730909&text=I%20am%20interested%20in%20your%20service"
                     rel="nofollow"><i class="fa icon-whatsapp animated infinite tada">&nbsp;</i><span>Wechat</span></a>
                 </li>
               </ul>
@@ -505,8 +509,8 @@
 
     </div>
     <div id="extra_js">
-      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-      <script defer="defer" type="text/javascript" src="/templates/ja_social/css/codejava.js"></script>
+      <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script defer="defer" type="text/javascript" src="templates/ja_social/css/codejava.js"></script>
     </div>
     <script type="application/ld+json" defer="defer">
 	{
