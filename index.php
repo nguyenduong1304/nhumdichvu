@@ -219,7 +219,7 @@
 
                       <div class="cot">
 
-                        <h3>zalo</h3>
+                        <h3>Zalo</h3>
 
                         <p><img src="images/zl.jpg" width="520" height="520" alt="zalo" /></p>
 
@@ -276,8 +276,8 @@
           <div class="footer3">
             <div class="main2">
               <p style="font-family: 'Roboto Condensed', Helvetica,Arial,sans-serif; font-size: 120%;"><a
-                  href="https://facebook.com/vietdevne">Thiết kế web </a>bởi <a
-                  href="https://facebook.com/profile.php?id=100009256916884">NguyênDevWeTrust</a></p>
+                  href=""> </a> <a
+                  href=""></a></p>
             </div>
           </div>
         </div>
