@@ -16,7 +16,7 @@
         <input type="text" name="acc">
         <br>
         <label for="">Mật khẩu</label>
-        <input type="text" name="pass">
+        <input type="password" name="pass">
         <br>
         <input name="login" type="submit" value="Đăng nhập">
     </form>
