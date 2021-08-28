@@ -207,13 +207,17 @@ function dongho(){
 	var gio = time.getHours();
 	var phut = time.getMinutes();
 	var giay = time.getSeconds();
+	var thu = time.getDay() + 1;
+	var ngay = time.getDate();
+	var thang = time.getMonth() + 1;
+	var nam = time.getFullYear();
 	if(gio < 10)
 	gio = "0" + gio;
 	if(phut < 10)
 	phut = "0" + phut;
 	if(giay < 10)
 	giay = "0" + giay;
-	document.getElementById('time').innerHTML = gio + ':' + phut + ':' + giay;
+	document.getElementById('time').innerHTML = gio + ':' + phut + ':' + giay + ' Thứ ' + thu + ' ' + ngay + '/' + thang + '/' +nam;
 		setTimeout("dongho()",1000);
 }
 

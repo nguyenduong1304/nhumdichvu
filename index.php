@@ -94,8 +94,7 @@
               </div>
             </div>
 
-            <div class="ngaythang"><span style="color: white;" id="time"></span><span style="color: white;" class="ngay">
-                Thứ 6, 27/08/2021 </span>
+            <div class="ngaythang"><span style="color: white;" id="time"></span><span style="color: white;" class="ngay" id="ngay"></span>
             </div>
           </div>
         </div>
@@ -187,7 +186,7 @@
 
                     <div class="custom">
                       <h1>SON THI NHUM <br />UY TÍN TẠO NÊN THƯƠNG HIỆU</h1>
-                      <p><strong>Địa chỉ :</strong> Số 77 Soài Côn,Phường 2, Vĩnh Châu, Tỉnh Sóc Trăng</p>
+                      <p><strong>Địa chỉ :</strong> Vĩnh Châu, Sóc Trăng</p>
                       <p><strong>Hotline :</strong> 0379 492 358</p>
                       <p><strong>ID Wechat :</strong> Jaenhum_0126 </p>
                       <p>&nbsp;</p>
