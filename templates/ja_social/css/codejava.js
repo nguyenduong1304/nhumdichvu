@@ -207,17 +207,25 @@ function dongho(){
 	var gio = time.getHours();
 	var phut = time.getMinutes();
 	var giay = time.getSeconds();
-	var thu = time.getDay() + 1;
 	var ngay = time.getDate();
 	var thang = time.getMonth() + 1;
 	var nam = time.getFullYear();
+	var weekday = new Array(7);
+	weekday[0] = " Chủ nhật";
+	weekday[1] = " Thứ 2";
+	weekday[2] = " Thứ 3";
+	weekday[3] = " Thứ 4";
+	weekday[4] = " Thứ 5";
+	weekday[5] = " Thứ 6";
+	weekday[6] = " Thứ 7";
+	var thu = weekday[time.getDay()];
 	if(gio < 10)
 	gio = "0" + gio;
 	if(phut < 10)
 	phut = "0" + phut;
 	if(giay < 10)
 	giay = "0" + giay;
-	document.getElementById('time').innerHTML = gio + ':' + phut + ':' + giay + ' Thứ ' + thu + ' ' + ngay + '/' + thang + '/' +nam;
+	document.getElementById('time').innerHTML = gio + ':' + phut + ':' + giay + thu + ' ' + ngay + '/' + thang + '/' +nam;
 		setTimeout("dongho()",1000);
 }
 
